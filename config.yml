@@ -1,0 +1,8 @@
+mysql:
+  database: nikkei_news
+  password: DB_PASSWORD
+  username: DB_USER
+  host: localhost
+  test_address:
+    - hoge@gmail.com
+    - mosuke@example.co.jp
