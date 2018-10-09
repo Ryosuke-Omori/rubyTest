@@ -17,7 +17,6 @@ client = Mysql2::Client.new(
 doc = Nokogiri.HTML(open(config["target"]))
 
 time_now = Time.now                                     # 現在日時
-str_now = time_now.strftime("%Y-%m-%dT%H:%M:%S")        # 現在日時の文字列
 str_today = time_now.strftime("%Y-%m-%d")               # 現在日付部分文字列
 time_before = time_now - 1.day                          # 現在日時から1日前
 str_before = time_before.strftime("%Y-%m-%dT%H:%M:%S")  # 現在日時から1日前の文字列
@@ -39,7 +38,7 @@ SELECT
 FROM
   news
 WHERE
-  `time` BETWEEN '#{str_before}' AND '#{str_now}' AND
+  `time` > '#{str_before}' AND
   url = '#{topic[:href]}'
   EOS
   result = client.query(search_query)
