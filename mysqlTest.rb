@@ -17,7 +17,7 @@ esc_title = client.escape('time3')
 esc_url = client.escape('https://www.google.co.jp/')
 p esc_title
 p esc_url
-insert_query = "INSERT INTO news (`id`, `time`, `title`, `url`, `created_at`, `updated_at`) VALUES (NULL, CURRENT_TIME(), '#{esc_title}', '#{esc_url}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
+insert_query = "INSERT INTO news (`id`, `time`, `title`, `url`, `created_at`, `updated_at`) VALUES (NULL, '2018-10-09T08:25', '#{esc_title}', '#{esc_url}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
 client.query(insert_query)
 
 # SELECT

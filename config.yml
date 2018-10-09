@@ -6,3 +6,5 @@ mysql:
   test_address:
     - hoge@gmail.com
     - mosuke@example.co.jp
+
+target: https://225225.jp/9ns/news.php

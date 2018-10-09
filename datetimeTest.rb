@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 
 require 'date'
+require 'active_support/time'
 
 # 現在の日付取得
 date_today = Date.today
@@ -40,3 +41,15 @@ str_time = "#{str_today}T08:25#{timezone_jpn}"
 p str_time
 date_time = custom_parse(str_time)
 p date_time
+
+p "======================="
+
+now = Time.now
+p now
+
+str_now_date = now.strftime("%Y-%m-%d")
+p str_now_date
+str_now_time = now.strftime("%Y-%m-%d %H:%M:%S")
+p str_now_time
+
+p (now - 1.hour).strftime("%Y-%m-%dT%H:%M:%S")
